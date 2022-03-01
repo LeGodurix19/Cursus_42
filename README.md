@@ -11,3 +11,4 @@
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_07_so_long">So_long</a> | ![42Project Score](https://badge42.herokuapp.com/api/project/hgoorick/so_long) |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_08_philosophers">Philsophers</a> | ![42Project Score](https://badge42.herokuapp.com/api/project/hgoorick/Philosophers) |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_09_minishell">Minishell</a> | ![42Project Score](https://badge42.herokuapp.com/api/project/hgoorick/minishell) |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_10_net_practice">NetPractice</a> | ![42Project Score](https://badge42.herokuapp.com/api/project/hgoorick/NetPractice) |
