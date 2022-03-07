@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:51:40 by hgoorick         ###   ########.fr       */
+/*   Created: 2022/03/07 10:06:33 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/07 14:31:12 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef WRONGCAT_CLASS_HPP
+# define WRONGCAT_CLASS_HPP
 
-#include <iostream>
+# include "all.hpp"
 
-class Karen
+class WrongCat : public WrongAnimal
 {
 
 private:
-
-    void debug( void );
-    void info( void );
-    void warning( void );
-    void error( void );
+    
+    std::string _type;
 
 public:
 
-    Karen( void );
-    ~Karen( void );
+    WrongCat( void );
+    WrongCat( WrongCat & src );
+    ~WrongCat();
 
-    void complain( std::string level );
+    void        makeSound( void ) const ;
+    std::string getType( void ) const ;
+    
 };
+
 #endif

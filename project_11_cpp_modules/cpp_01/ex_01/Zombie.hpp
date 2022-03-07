@@ -6,9 +6,12 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 14:47:58 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/05 15:12:36 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/07 16:50:33 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 #include <new>
@@ -28,3 +31,5 @@ public:
 	void    announce( void ) const ;
 
 };
+
+#endif

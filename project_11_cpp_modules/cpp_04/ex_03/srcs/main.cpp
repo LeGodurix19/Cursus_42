@@ -1,35 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:51:40 by hgoorick         ###   ########.fr       */
+/*   Created: 2022/03/07 17:33:34 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/07 17:33:35 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
-
-#include <iostream>
-
-class Karen
-{
-
-private:
-
-    void debug( void );
-    void info( void );
-    void warning( void );
-    void error( void );
-
-public:
-
-    Karen( void );
-    ~Karen( void );
-
-    void complain( std::string level );
-};
-#endif
+#include "../include/all.hpp"

@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Animal.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:51:40 by hgoorick         ###   ########.fr       */
+/*   Created: 2022/03/07 10:06:59 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/07 16:59:30 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef ANIMAL_CLASS_HPP
+# define ANIMAL_CLASS_HPP
 
-#include <iostream>
+# include "all.hpp"
 
-class Karen
+class AAnimal
 {
+protected:
 
-private:
+    AAnimal( void );
+    AAnimal( AAnimal & src );
 
-    void debug( void );
-    void info( void );
-    void warning( void );
-    void error( void );
+    std::string _type;
 
 public:
 
-    Karen( void );
-    ~Karen( void );
+    
+    virtual ~AAnimal( void )  = 0;
 
-    void complain( std::string level );
+    virtual void        makeSound ( void ) const;
+    virtual std::string getType( void ) const ;
+
 };
+
 #endif

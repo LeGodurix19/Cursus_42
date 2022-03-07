@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Dog.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:51:40 by hgoorick         ###   ########.fr       */
+/*   Created: 2022/03/07 10:06:50 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/07 14:52:55 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef DOG_CLASS_HPP
+# define DOG_CLASS_HPP
 
-#include <iostream>
+# include "all.hpp"
 
-class Karen
+class Dog : public Animal
 {
-
+    
 private:
-
-    void debug( void );
-    void info( void );
-    void warning( void );
-    void error( void );
+    
+    std::string  _type;
+    Brain       *_brain;
 
 public:
 
-    Karen( void );
-    ~Karen( void );
+    Dog( void );
+    Dog( Dog & src );
+    ~Dog( void );
 
-    void complain( std::string level );
+    void        makeSound( void ) const ;
+    std::string getType( void ) const ;
+    Brain       *getBrain( void ) const ;
+
+
 };
+
 #endif

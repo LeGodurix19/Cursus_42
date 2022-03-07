@@ -1,35 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Ice.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:51:40 by hgoorick         ###   ########.fr       */
+/*   Created: 2022/03/07 17:30:04 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/07 17:30:13 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef ICE_CLASS_HPP
+# define ICE_CLASS_HPP
 
-#include <iostream>
-
-class Karen
-{
-
-private:
-
-    void debug( void );
-    void info( void );
-    void warning( void );
-    void error( void );
-
-public:
-
-    Karen( void );
-    ~Karen( void );
-
-    void complain( std::string level );
-};
 #endif

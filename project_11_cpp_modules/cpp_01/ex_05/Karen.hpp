@@ -6,9 +6,12 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 18:08:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/05 18:19:51 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/07 16:51:13 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef KAREN_HPP
+# define KAREN_HPP
 
 #include <iostream>
 
@@ -29,3 +32,4 @@ public:
 
     void complain( std::string level );
 };
+#endif
