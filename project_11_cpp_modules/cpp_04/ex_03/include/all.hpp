@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:27:48 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 17:32:54 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/08 10:45:30 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 
 # include <iostream>
 
+# include "ICharacter.class.hpp"
 # include "AMateria.class.hpp"
 # include "Character.class.hpp"
 # include "Cure.class.hpp"
 # include "Ice.class.hpp"
-# include "ICharacter.class.hpp"
 # include "IMateriaSource.class.hpp"
 # include "MateriaSource.class.hpp"
 

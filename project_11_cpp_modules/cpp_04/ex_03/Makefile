@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/06 15:24:56 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/07 09:16:51 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 10:53:15 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,16 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = ClapTrap
+NAME = Materia
 
 FLAGS = -Wall -Wextra -Werror
 
-SRCS =	main.cpp \
-		ClapTrap.cpp
+SRCS =	srcs/main.cpp \
+		srcs/AMateria.class.cpp \
+		srcs/Character.class.cpp \
+		srcs/Cure.class.cpp \
+		srcs/Ice.class.cpp \
+		srcs/MateriaSource.class.cpp
 
 OBJ = $(SRCS:%.cpp=%.o)
 
