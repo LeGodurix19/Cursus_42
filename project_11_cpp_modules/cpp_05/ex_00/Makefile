@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/06 15:24:56 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/08 11:48:53 by hgoorick         ###   ########.fr        #
+#    Created: 2022/03/08 11:42:55 by hgoorick          #+#    #+#              #
+#    Updated: 2022/03/08 11:49:37 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = ClapTrap
+NAME = Animals
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp \
-		ClapTrap.cpp
+SRCS =	srcs/main.cpp \
+		srcs/Bureaucrat.cpp
 
 OBJ = $(SRCS:%.cpp=%.o)
 

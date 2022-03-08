@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:08:08 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 14:56:13 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/08 20:28:16 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,9 @@ int main()
 	Point b(4, 7);
 	Point c(6, 1);
 	Point p(3, 4);
-	Point q(4, 6.9);
 	Point r(2, 3);
 
 	std::cout << bsp(a, b, c, p) << std::endl;
-	std::cout << bsp(a, b, c, q) << std::endl;
 	std::cout << bsp(a, b, c, a) << std::endl;
 	std::cout << bsp(a, b, c, r) << std::endl;
 }

@@ -13,7 +13,7 @@
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_09_minishell">Minishell</a> | 101% | Recreation de bash via un projet de groupe a 3 |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_10_net_practice">NetPractice</a> | 100% | Exploration du monde des reseaux a travers les IP |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_00">CPP_00</a> | 100% | Decouverte du c++ |
-| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_01">CPP_01</a> | En cours | Decouverte du c++ |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_01">CPP_01</a> | 100% | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_02">CPP_02</a> | En cours | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_03">CPP_03</a> | En cours | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_04">CPP_04</a> | En cours | Decouverte du c++ |

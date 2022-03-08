@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 15:28:17 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/05 15:28:45 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 11:48:05 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FAST			=	0.0001
 
 NAME = exec
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp
 

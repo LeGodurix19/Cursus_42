@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 14:19:17 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/05 15:02:39 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 11:47:16 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FAST			=	0.0001
 
 NAME = Account
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	Account.cpp \
 		test.cpp

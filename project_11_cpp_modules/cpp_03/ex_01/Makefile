@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/06 15:24:56 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/06 16:44:29 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 11:48:58 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FAST			=	0.0001
 
 NAME = ClapTrap
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp \
 		ClapTrap.cpp \

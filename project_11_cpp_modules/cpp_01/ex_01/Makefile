@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 14:45:27 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/05 15:19:26 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 11:47:59 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FAST			=	0.0001
 
 NAME = Horde
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	main.cpp \
 		zombieHorde.cpp \

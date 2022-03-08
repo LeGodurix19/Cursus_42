@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/05 17:32:30 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/05 17:32:30 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/08 11:48:11 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ FAST			=	0.0001
 
 NAME = Fight
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS =	HumanA.cpp \
 		HumanB.cpp \
