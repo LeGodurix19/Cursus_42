@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:31:06 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/08 10:40:29 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 11:03:46 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,9 @@ public:
 
 	AMateria* createMateria(std::string const & type);
 
+	AMateria*	getMateria( int const position ) const ;
+
+    void operator= (MateriaSource const & a);
 
 };
 

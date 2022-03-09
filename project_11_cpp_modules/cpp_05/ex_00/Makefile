@@ -6,7 +6,7 @@
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/08 11:42:55 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/08 11:49:37 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/09 12:00:26 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = Animals
+NAME = Bureaucrat
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	srcs/main.cpp \
-		srcs/Bureaucrat.cpp
+SRCS =	main.cpp \
+		Bureaucrat.cpp
 
 OBJ = $(SRCS:%.cpp=%.o)
 

@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 11:00:25 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:30:24 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:18:39 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 
     virtual void        makeSound ( void ) const;
     virtual std::string getType( void ) const ;
+
+    void operator= (WrongAnimal const & a);
 
 };
 

@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 17:12:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 17:23:09 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:12:54 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ public:
 
     void	whoAmI();
 
+    void operator= (DiamondTrap const & a);
 };
 
 #endif

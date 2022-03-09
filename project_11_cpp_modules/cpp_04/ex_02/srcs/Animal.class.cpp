@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:07:12 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 17:00:01 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:44:57 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ void    AAnimal::makeSound( void ) const
 std::string    AAnimal::getType( void ) const
 {
     return (this->_type);
+}
+
+void AAnimal::operator= ( AAnimal const &)
+{
+    return ;
 }

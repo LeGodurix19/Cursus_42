@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:06:33 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:59:09 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:43:12 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,9 @@ public:
     void        makeSound( void ) const ;
     std::string getType( void ) const ;
     Brain       *getBrain( void ) const ;
+
+    void operator= (Cat const & a);
+
 };
 
 #endif

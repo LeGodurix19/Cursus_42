@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:33:00 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/08 10:50:34 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:52:03 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,10 @@ AMateria::AMateria(std::string const & type) : _type(type)
 std::string const & AMateria::getType() const
 {
 	return (_type);
+}
+
+void AMateria::operator= (AMateria const & a)
+{
+    this->_type = a.getType();
+    return ;
 }

@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:25:41 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 16:58:29 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:06:02 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,8 @@ public:
     void    takeDamage(unsigned int amount);
     void    beRepaired(unsigned int amount);
 
+    std::string getName( void ) const ;
+
+    void operator= (ClapTrap const & a);
 };
 #endif

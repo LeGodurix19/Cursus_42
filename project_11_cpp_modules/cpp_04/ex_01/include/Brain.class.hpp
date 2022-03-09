@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 14:08:50 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:54:34 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:26:54 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
     ~Brain( void );
     
     std::string getIdea( int position ) const;
+
+    void operator= (Brain const & a);
 };
 
 #endif

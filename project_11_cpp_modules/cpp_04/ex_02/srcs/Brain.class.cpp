@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 14:08:46 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:43:47 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:28:00 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,11 @@ Brain::~Brain( void )
 std::string Brain::getIdea( int position ) const
 {
     return (this->_ideas[position % 100]);
+}
+
+void Brain::operator= ( Brain const & a)
+{
+    for (int i = 0; i < 100; i++)
+        this->_ideas[i] = a.getIdea(i);
+    return ;
 }

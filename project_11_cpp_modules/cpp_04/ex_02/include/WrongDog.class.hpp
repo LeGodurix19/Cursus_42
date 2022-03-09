@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:06:50 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:30:31 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:19:31 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ public:
 
     void        makeSound( void ) const ;
     std::string getType( void ) const ;
+
+    void operator= (WrongDog const & a);
 
 };
 

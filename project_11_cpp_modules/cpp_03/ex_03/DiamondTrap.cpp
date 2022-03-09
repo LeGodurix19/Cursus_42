@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 17:12:38 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 17:23:27 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:13:10 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,10 @@ DiamondTrap::~DiamondTrap()
 void	DiamondTrap::whoAmI()
 {
 	std::cout << "Hi, I am " << this->ClapTrap::_name << " but you can call me " << this->_name << "." << std::endl;
+}
+
+void DiamondTrap::operator= ( DiamondTrap const & a )
+{
+	this->_name = a.getName();
+    return ;
 }

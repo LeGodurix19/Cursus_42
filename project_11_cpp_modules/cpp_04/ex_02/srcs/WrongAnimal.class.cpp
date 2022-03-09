@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 11:00:09 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:32:01 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:22:45 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,9 @@ void    WrongAnimal::makeSound( void ) const
 std::string    WrongAnimal::getType( void ) const
 {
     return (this->_type);
+}
+
+void WrongAnimal::operator= ( WrongAnimal const & )
+{
+    return ;
 }

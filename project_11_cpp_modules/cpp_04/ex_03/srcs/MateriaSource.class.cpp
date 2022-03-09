@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:33:38 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/08 10:42:29 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 11:04:30 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,18 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 		i++;
 	}
 	return(NULL);
+}
+
+AMateria	* MateriaSource::getMateria( int const position )  const
+{
+	if (position >= 0 && position < 4 )
+		return (this->_inv[position]);
+	return (NULL);
+}
+
+void MateriaSource::operator= (MateriaSource const & a)
+{
+	for (int i = 0; i < 4; i++)
+		this->_inv[i] = a.getMateria(i);
+    return ;
 }

@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:07:07 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:31:47 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:22:34 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,9 @@ void    Cat::makeSound( void ) const
 std::string    Cat::getType( void ) const
 {
     return (this->_type);
+}
+
+void Cat::operator= ( Cat const & )
+{
+    return ;
 }

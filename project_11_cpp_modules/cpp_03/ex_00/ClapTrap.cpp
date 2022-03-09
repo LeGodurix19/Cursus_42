@@ -66,3 +66,14 @@ void    ClapTrap::beRepaired(unsigned int amount)
     this->_energyPoints--;
     return ;
 }
+
+std::string ClapTrap::getName( void ) const
+{
+    return (this->_name);
+}
+
+void ClapTrap::operator= ( ClapTrap const & a )
+{
+	this->_name = a.getName();
+    return ;
+}

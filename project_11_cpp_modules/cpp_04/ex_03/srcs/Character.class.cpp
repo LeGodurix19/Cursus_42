@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:33:19 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/08 11:19:17 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 11:02:22 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,13 +55,7 @@ void 				Character::equip(AMateria* m)
 		i++;
     
 	if (i < 4)
-    {
         this->_inv[i] =m;
-        /*if (!m->getType().compare("ice"))
-            this->_inv[i] = new Ice();
-        else if (!m->getType().compare("cure"))
-            this->_inv[i] = new Cure();*/
-    }
 }
 
 void 				Character::unequip(int idx)
@@ -69,9 +63,17 @@ void 				Character::unequip(int idx)
 	this->_inv[idx] = NULL;
 }
 
-AMateria *			Character::getInv(int idx )
+AMateria *			Character::getInv(int idx ) const
 {
 	if (idx >= 0 && idx < 4 )
 		return (this->_inv[idx]);
 	return (NULL);
+}
+
+void Character::operator= (Character const & a)
+{
+    this->_name = a.getName();
+	for (int i = 0; i < 4; i++)
+		this->_inv[i] = a.getInv(i);
+    return ;
 }

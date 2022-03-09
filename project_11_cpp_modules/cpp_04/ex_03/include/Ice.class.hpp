@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:30:04 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/08 10:52:09 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:46:35 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ public:
 
     AMateria* clone() const;
     void use(ICharacter & target);
+
+    void operator= (Ice const & a);
 
 };
 

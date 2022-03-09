@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:07:10 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:31:52 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:22:40 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,9 @@ void    Dog::makeSound( void ) const
 std::string    Dog::getType( void ) const
 {
     return (this->_type);
+}
+
+void Dog::operator= ( Dog const & )
+{
+    return ;
 }

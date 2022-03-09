@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 16:49:34 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 17:02:12 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:09:51 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ public:
 
     void    attack(std::string const & target);
     void    highFivesGuys( void );
+
+    void operator= (FragTrap const & a);
 };
 
 #endif

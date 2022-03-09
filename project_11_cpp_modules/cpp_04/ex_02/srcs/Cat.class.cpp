@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:07:07 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 16:47:26 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:26:17 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,9 @@ std::string    Cat::getType( void ) const
 Brain           *Cat::getBrain( void ) const
 {
     return (this->_brain);
+}
+
+void Cat::operator= ( Cat const & )
+{
+    return ;
 }

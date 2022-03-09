@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 10:06:50 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/07 14:52:55 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:26:05 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ public:
     std::string getType( void ) const ;
     Brain       *getBrain( void ) const ;
 
+    void operator= (Dog const & a);
 
 };
 

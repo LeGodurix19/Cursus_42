@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 16:50:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 17:01:47 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:10:35 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,10 @@ void	FragTrap::attack(std::string const & target)
     std::cout << " attack " << target;
     std::cout << ", causing " << this->_attackDamage;
     std::cout << " points of damage!" << std::endl;
+}
+
+void FragTrap::operator= ( FragTrap const & a )
+{
+	this->_name = a.getName();
+    return ;
 }
