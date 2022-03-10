@@ -1,64 +1,48 @@
-# include "Bureaucrat.hpp"
+# include "Form.hpp"
 
 int main()
 {
-    Bureaucrat* bureaucrat = new Bureaucrat("Bob", 2);
-    Bureaucrat* stagiaire = new Bureaucrat("Cafe", 149);
+    Form* constitution = new Form("Constitution", 10, 30);
+    Form* toHigh;
+    Form* toLow;
     
-    // Test --
-    try
-    {
-        std::cout << *bureaucrat << std::endl;
-        bureaucrat->up();
-        std::cout << bureaucrat->getName() << " upgraded !" << std::endl;
-        std::cout << *bureaucrat << std::endl;
-        bureaucrat->up();
-        std::cerr << "Bug" << std::endl;
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << "Error" << e.what() << std::endl;
-    }
-
-    // Test ++
-    try
-    {
-        std::cout << *stagiaire << std::endl;
-        stagiaire->down();
-        std::cout << stagiaire->getName() << " downgraded !" << std::endl;
-        std::cout << *stagiaire << std::endl;
-        stagiaire->down();
-        std::cerr << "Bug" << std::endl;
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << "Error" << e.what() << std::endl;
-    }
-
-    Bureaucrat* toHigh;
-    Bureaucrat* toLow;
-
-    // Test ToHigh
-    try
-    {
-        toHigh = new Bureaucrat("ToHigh", 0);
-        std::cerr << "Bug" << std::endl;
-    }
-    catch (std::exception & e)
-    {
-        std::cerr << "Error" << e.what() << std::endl;
-    }
+    std::cout << *constitution;
     
     try
     {
-        toLow = new Bureaucrat("ToLow", 420);
-        std::cerr << "Bug" << std::endl;
+       toHigh = new Form("ToHigh", 0, 20);
     }
-    catch (std::exception & e)
+    catch(std::exception & e)
     {
-        std::cerr << "Error" << e.what() << std::endl;
+        std::cerr << e.what() << std::endl;
     }
+
+    try
+    {
+       toLow = new Form("ToHigh", 10, 199);
+    }
+    catch(std::exception & e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+
+    Bureaucrat* bob = new Bureaucrat("Bob", 5);
     
-    delete bureaucrat;
-    delete stagiaire;
+    std::cout << *bob;
+
+    bob->signForm(*constitution);
+
+    std::cout << *constitution;
+
+    bob->signForm(*constitution);
+
+    Form* nop = new Form("Constitution", 1, 1);
+    Bureaucrat* nopper = new Bureaucrat("Nopper", 12);
+
+    nopper->signForm(*nop);
+    
+    delete constitution;
+    delete bob;
+    delete nop;
+    delete nopper;
 }

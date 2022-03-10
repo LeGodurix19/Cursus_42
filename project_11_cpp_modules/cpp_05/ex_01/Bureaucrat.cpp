@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:42:48 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 12:29:19 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/10 11:11:43 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void    Bureaucrat::operator=(const Bureaucrat& op)
 
 std::ostream& operator<< ( std::ostream &flux, Bureaucrat const& Bureaucrat )
 {
-    flux << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade();
+    flux << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade() << std::endl;
     return flux;
 }
 
@@ -97,6 +97,26 @@ void Bureaucrat::down( void )
 int Bureaucrat::getGrade( void ) const
 {
     return (this->_garde);
+}
+
+void				Bureaucrat::signForm(Form & form)
+{
+	if (form.getSign())
+    {
+		std::cout << this->_name << " cant sign " << form.getName();
+        std::cout << " because he see that is already signed." << std::endl;
+    }
+	else
+		try
+		{
+			form.beSigned(*this);
+			std::cout << this->_name << " signs " << form.getName() << std::endl;
+		}
+		catch (std::exception & e)
+		{
+			std::cout << this->_name << " cant sign " << form.getName() << " because ";
+			std::cout << e.what() << std::endl;
+		}
 }
 
 /********************/

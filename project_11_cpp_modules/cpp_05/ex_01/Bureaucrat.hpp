@@ -6,11 +6,17 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:42:52 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 12:18:16 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/10 10:50:09 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
+
 # include <iostream>
+
+#include "Form.hpp"
+class Form;
 
 class Bureaucrat
 {
@@ -32,6 +38,7 @@ public:
     void    operator=(const Bureaucrat& op);
     void    up( void );
     void    down( void );
+    void	signForm(Form & form);
 
     class GradeTooHighException : public std::exception
     {
@@ -47,3 +54,5 @@ public:
 };
 
 std::ostream    &operator<<(std::ostream & out, const Bureaucrat & bureaucrat);
+
+#endif

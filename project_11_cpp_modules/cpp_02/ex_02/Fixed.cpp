@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 11:07:23 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/06 13:33:36 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/10 16:46:20 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,7 +178,7 @@ Fixed	& Fixed::operator++ ( void )
 
 Fixed	& Fixed::operator-- ( void )
 {
-	 this->_nb += 1;
+	 this->_nb -= 1;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:42:48 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 12:29:46 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/10 11:17:49 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ void    Bureaucrat::operator=(const Bureaucrat& op)
 
 std::ostream& operator<< ( std::ostream &flux, Bureaucrat const& Bureaucrat )
 {
-    flux << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade();
+    flux << Bureaucrat.getName() << ", bureaucrat grade " << Bureaucrat.getGrade() << std::endl;
     return flux;
 }
 
