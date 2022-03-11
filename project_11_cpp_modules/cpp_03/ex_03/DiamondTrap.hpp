@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 17:12:31 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 10:12:54 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 05:14:44 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ private:
 public:
 
     DiamondTrap( std::string const name );
+    DiamondTrap( DiamondTrap & cpy);
     ~DiamondTrap();
 
     using FragTrap::_hitPoints;

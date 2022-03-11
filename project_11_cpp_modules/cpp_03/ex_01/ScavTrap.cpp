@@ -6,11 +6,17 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 16:28:44 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 10:04:30 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 05:06:37 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+/********************/
+/*                  */
+/*  Constructor     */
+/*                  */
+/********************/
 
 ScavTrap::ScavTrap( std::string name ) : ClapTrap( name, 100, 50, 20 )
 {
@@ -18,11 +24,29 @@ ScavTrap::ScavTrap( std::string name ) : ClapTrap( name, 100, 50, 20 )
     return ;
 }
 
+ScavTrap::ScavTrap( ScavTrap & cpy ) : ClapTrap( cpy.getName(), 100, 50, 20 )
+{
+    std::cout << "Wake up ScavTrap !" << std::endl;
+    return ;
+}
+
+/********************/
+/*                  */
+/*  Destructor      */
+/*                  */
+/********************/
+
 ScavTrap::~ScavTrap()
 {
     std::cout << "Come back ScavTrap !" << std::endl;
     return ;
 }
+
+/********************/
+/*                  */
+/*  Fct membre      */
+/*                  */
+/********************/
 
 void ScavTrap::guardGate()
 {
@@ -46,6 +70,13 @@ void	ScavTrap::attack(std::string const & target)
     std::cout << ", causing " << this->_attackDamage;
     std::cout << " points of damage!" << std::endl;
 }
+
+
+/********************/
+/*                  */
+/*  Overoperator    */
+/*                  */
+/********************/
 
 void ScavTrap::operator= ( ScavTrap const & a )
 {

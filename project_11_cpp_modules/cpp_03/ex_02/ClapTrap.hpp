@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:25:41 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 10:06:02 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 05:01:20 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ protected:
     int         _attackDamage;
 
 public:
+
     ClapTrap( std::string const name , int const hitPoints, int const energyPoints, int const attackDamage);
     ClapTrap( std::string const name );
+    ClapTrap( ClapTrap & cpy );
+
     ~ClapTrap();
 
     void    attack(const std::string& target);
@@ -35,6 +38,9 @@ public:
     void    beRepaired(unsigned int amount);
 
     std::string getName( void ) const ;
+    int         getHitPoints( void ) const;
+    int         getEnergyPoints( void ) const;
+    int         getAttackDamage( void ) const;
 
     void operator= (ClapTrap const & a);
 };

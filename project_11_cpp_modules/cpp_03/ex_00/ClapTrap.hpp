@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 15:25:41 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 09:58:56 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 04:58:18 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ private:
     int         _attackDamage;
 
 public:
+
     ClapTrap( std::string const name );
+    ClapTrap( ClapTrap & cpy );
+    
     ~ClapTrap();
 
     void    attack(const std::string& target);

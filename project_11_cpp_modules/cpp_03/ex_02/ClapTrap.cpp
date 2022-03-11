@@ -1,5 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/11 04:59:03 by hgoorick          #+#    #+#             */
+/*   Updated: 2022/03/11 05:03:12 by hgoorick         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+/********************/
+/*                  */
+/*  Constructor     */
+/*                  */
+/********************/
 
 ClapTrap::ClapTrap( std::string const name ) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
 {
@@ -13,11 +30,60 @@ ClapTrap::ClapTrap( std::string const name , int const hitPoints, int const ener
     return ;
 }
 
+ClapTrap::ClapTrap( ClapTrap & cpy ) : _name(cpy.getName()), _hitPoints(cpy.getHitPoints()), _energyPoints(cpy.getEnergyPoints()), _attackDamage(cpy.getAttackDamage())
+{
+    std::cout << "Wake up ClapTrap !" << std::endl;
+    return ;
+}
+
+/********************/
+/*                  */
+/*  Destructor      */
+/*                  */
+/********************/
+
 ClapTrap::~ClapTrap()
 {
     std::cout << "Come back ClapTrap !" << std::endl;
     return ;
 }
+
+/********************/
+/*                  */
+/*  Fct membre      */
+/*                  */
+/********************/
+
+    /********************/
+    /*                  */
+    /*  Getter          */
+    /*                  */
+    /********************/
+
+std::string ClapTrap::getName( void ) const
+{
+    return (this->_name);
+}
+
+int ClapTrap::getHitPoints( void ) const
+{
+    return (this->_hitPoints);
+}
+int ClapTrap::getEnergyPoints( void ) const
+{
+    return (this->_energyPoints);
+}
+int ClapTrap::getAttackDamage( void ) const
+{
+    return (this->_attackDamage);
+}
+
+    /********************/
+    /*                  */
+    /*  Other           */
+    /*                  */
+    /********************/
+    
 void    ClapTrap::attack(const std::string& target)
 {
     if (this->_hitPoints <= 0)
@@ -40,6 +106,7 @@ void    ClapTrap::attack(const std::string& target)
 
     return ;
 }
+
 void    ClapTrap::takeDamage(unsigned int amount)
 {
     if (this->_hitPoints <= 0)
@@ -54,6 +121,7 @@ void    ClapTrap::takeDamage(unsigned int amount)
     this->_hitPoints -= amount;
     return ;
 }
+
 void    ClapTrap::beRepaired(unsigned int amount)
 {
     if (this->_hitPoints <= 0)
@@ -75,10 +143,11 @@ void    ClapTrap::beRepaired(unsigned int amount)
     return ;
 }
 
-std::string ClapTrap::getName( void ) const
-{
-    return (this->_name);
-}
+/********************/
+/*                  */
+/*  Overoperator    */
+/*                  */
+/********************/
 
 void ClapTrap::operator= ( ClapTrap const & a )
 {
