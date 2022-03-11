@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 17:33:19 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 11:02:22 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 19:37:16 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,7 @@ std::string const & Character::getName() const
 void 				Character::use(int idx, ICharacter& target)
 {
 	if (this->_inv[idx])
-    {
-        std::cout << "Test" << std::endl;
 		this->_inv[idx]->use(target);
-    }
 }
 
 void 				Character::equip(AMateria* m)

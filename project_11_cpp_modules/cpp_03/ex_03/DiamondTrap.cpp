@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/06 17:12:38 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/11 05:14:21 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/11 14:55:26 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 
 DiamondTrap::DiamondTrap(std::string const name) : ClapTrap( name + "_clap_name" , 100, 50, 30), ScavTrap( name + "_clap_name" ), FragTrap( name + "_clap_name" ), _name(name)
 {
-    std::cout << "Come back DiamondTrap !" << std::endl;
+    std::cout << "Wake up DiamondTrap !" << std::endl;
     return ;
 }
 
 DiamondTrap::DiamondTrap( DiamondTrap & cpy) : ClapTrap( cpy.getName() + "_clap_name" , 100, 50, 30), ScavTrap( cpy.getName() + "_clap_name" ), FragTrap( cpy.getName() + "_clap_name" ), _name(cpy.getName())
 {
-    std::cout << "Come back DiamondTrap !" << std::endl;
+    std::cout << "Wake up DiamondTrap !" << std::endl;
     return ;
 }
 
@@ -38,6 +38,7 @@ DiamondTrap::DiamondTrap( DiamondTrap & cpy) : ClapTrap( cpy.getName() + "_clap_
 
 DiamondTrap::~DiamondTrap()
 {
+    std::cout << "Come back DiamondTrap !" << std::endl;
     return ;
 }
 
