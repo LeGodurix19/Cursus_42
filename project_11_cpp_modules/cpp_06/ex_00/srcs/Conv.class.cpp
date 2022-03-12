@@ -6,11 +6,17 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:18:07 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/11 18:08:05 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/12 10:59:49 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/Conv.class.hpp"
+
+/********************/
+/*                  */
+/*  Constructor     */
+/*                  */
+/********************/
 
 Conv::Conv( void ) : _valInt(0), _valChar(0), _valFloat(0), _valDouble(0)
 {
@@ -45,15 +51,50 @@ Conv::Conv( std::string in )
     return ;
 }
 
-Conv::Conv( Conv const & cpy ) : _valInt(cpy.getValInt()), _valChar(cpy.getValChar()), _valFloat(cpy.getValFloat()), _valDouble(cpy.getValDouble())
+Conv::Conv( Conv const & cpy ) : _isInt(cpy.getIsInt()), _isChar(cpy.getIsChar()), _valInt(cpy.getValInt()), _valChar(cpy.getValChar()), _valFloat(cpy.getValFloat()), _valDouble(cpy.getValDouble())
 {
     return ;
 }
+
+/********************/
+/*                  */
+/*  Destructor      */
+/*                  */
+/********************/
 
 Conv::~Conv( void )
 {
     return ;
 }
+
+/********************/
+/*                  */
+/*  Over operator   */
+/*                  */
+/********************/
+
+void    Conv::operator=(const Conv& op)
+{
+    this->_valInt = op.getValInt();
+    this->_valChar = op.getValChar();
+    this->_valFloat = op.getValFloat();
+    this->_valDouble = op.getValDouble();
+    this->_isInt = op.getIsInt();
+    this->_isChar = op.getIsChar();
+    return ;
+}
+
+/********************/
+/*                  */
+/*  Fct membre      */
+/*                  */
+/********************/
+
+    /********************/
+    /*                  */
+    /*  Getter          */
+    /*                  */
+    /********************/
 
 int    Conv::getValInt( void ) const
 {

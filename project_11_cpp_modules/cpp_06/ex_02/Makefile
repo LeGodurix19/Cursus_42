@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/03/11 17:25:44 by hgoorick          #+#    #+#              #
-#    Updated: 2022/03/12 10:25:02 by hgoorick         ###   ########.fr        #
+#    Created: 2022/03/12 11:07:02 by hgoorick          #+#    #+#              #
+#    Updated: 2022/03/12 11:18:05 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,12 +19,12 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = convert
+NAME = True_type
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	srcs/Conv.class.cpp \
-		srcs/main.cpp
+SRCS =	srcs/main.cpp \
+		srcs/identify.cpp
 		
 OBJ = $(SRCS:%.cpp=%.o)
 

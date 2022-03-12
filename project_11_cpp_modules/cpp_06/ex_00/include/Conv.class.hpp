@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   conv.class.hpp                                     :+:      :+:    :+:   */
+/*   Conv.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:53:09 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/11 17:28:54 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/12 10:18:52 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ public:
     float   getValFloat( void ) const;
     
     double  getValDouble( void ) const;
+
+    void    operator=(const Conv& op);
 
 };
 
