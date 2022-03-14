@@ -6,11 +6,14 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/08 11:42:52 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/09 12:18:16 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/14 09:55:24 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <iostream>
+
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
 class Bureaucrat
 {
@@ -47,3 +50,5 @@ public:
 };
 
 std::ostream    &operator<<(std::ostream & out, const Bureaucrat & bureaucrat);
+
+#endif

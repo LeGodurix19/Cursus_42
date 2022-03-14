@@ -5,8 +5,10 @@
 
 static void testForm(Bureaucrat* bur, Form* form)
 {
-    std::cout << std::endl << "Sign & Execute " << form->getName() << " : " << std::endl;
+    std::cout << "\n -> Sign" << std::endl;
     bur->signForm(*form);
+
+    std::cout << "\n -> Exec" << std::endl;
     bur->executeForm(*form);
 }
 
@@ -20,13 +22,13 @@ int main()
     Bureaucrat* james = new Bureaucrat("James", 33);
     Bureaucrat* meg = new Bureaucrat("Meg", 1);
 
-    std::cout << "Normal tests : " << std::endl;
+    std::cout << "=== Normal tests ============" << std::endl;
 
     testForm(bob, shrub);
     testForm(james, robot);
     testForm(meg, pardon);
 
-    std::cout << std::endl << "AlreadySigned & ToLow tests : " << std::endl;
+    std::cout << "\n=== Error tests =============" << std::endl;
 
     testForm(bob, pardon);
 
