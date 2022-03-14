@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+         #
+#    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 08:45:20 by hugoorickx        #+#    #+#              #
-#    Updated: 2022/03/14 08:52:22 by hugoorickx       ###   ########.fr        #
+#    Updated: 2022/03/14 16:34:52 by hgoorick         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = Start
+NAME = easyfind
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
