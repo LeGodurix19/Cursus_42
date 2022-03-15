@@ -6,7 +6,7 @@
 /*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:16:20 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/11 18:12:18 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/15 14:40:30 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int ac, char **av)
 		Conv	nb(av[1]);
 
 		if (nb.getIsChar())
-			std::cout << "char: " << nb.getValChar() << std::endl;
+			std::cout << "char: '" << nb.getValChar() << "'" << std::endl;
 		else
 			std::cout << "char: Non displayable" << std::endl;
 		if (nb.getIsInt())
