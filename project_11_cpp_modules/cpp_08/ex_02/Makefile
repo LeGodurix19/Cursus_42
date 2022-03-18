@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
+#    By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 08:45:35 by hugoorickx        #+#    #+#              #
-#    Updated: 2022/03/15 09:30:49 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/18 13:45:36 by hugoorickx       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ START_FIRST		=	\033[999D
 
 FAST			=	0.0001
 
-NAME = span
+NAME = Mutant
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
