@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   identify.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/12 11:15:28 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/12 11:17:35 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/21 10:22:19 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void identify( Base* p )
 		std::cout << "B" << std::endl;
 	else if (dynamic_cast<C *>(p))
 		std::cout << "C" << std::endl;
-    
     return ;
 }
 

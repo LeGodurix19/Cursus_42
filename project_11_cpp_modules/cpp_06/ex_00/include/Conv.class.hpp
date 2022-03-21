@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Conv.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 16:53:09 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/12 10:18:52 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/21 10:25:25 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CONV_CLASS_HPP
 
 # include <iostream>
+# include <cmath>
 
 class Conv
 {

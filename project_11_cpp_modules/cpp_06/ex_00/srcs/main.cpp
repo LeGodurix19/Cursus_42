@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:16:20 by hgoorick          #+#    #+#             */
-/*   Updated: 2022/03/15 14:40:30 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/21 10:33:39 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,18 @@ int main(int ac, char **av)
 		else
 			std::cout << "char: Non displayable" << std::endl;
 		if (nb.getIsInt())
-		    std::cout << "int: " << nb.getValInt() << std::endl;
+			std::cout << "int: " << nb.getValInt() << std::endl;
 		else
 			std::cout << "int: Non displayable" << std::endl;
-        if (!nb.getValFloat())
+        if (nb.getValFloat() == (int)nb.getValFloat())
+		{
 		    std::cout << "float: " << nb.getValFloat() << ".0f" << std::endl;
+		    std::cout << "double: " << nb.getValDouble() << ".0" << std::endl;
+		}
         else
+		{
 		    std::cout << "float: " << nb.getValFloat() << "f" << std::endl;
-        if (!nb.getValDouble())
-		    std::cout << "float: " << nb.getValDouble() << ".0" << std::endl;
-        else
-		    std::cout << "float: " << nb.getValDouble() << std::endl;
+		    std::cout << "double: " << nb.getValDouble() << std::endl;
+		}
 	}
 }
