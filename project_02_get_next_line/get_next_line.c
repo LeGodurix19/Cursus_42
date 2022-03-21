@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 14:36:24 by hgoorick          #+#    #+#             */
-/*   Updated: 2021/09/15 14:38:43 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:39:38 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*get_next_line(int fd)
 /* ************************************************************************ */
 /*	return where \n is														*/
 /* ************************************************************************ */
-
+//modif from libft
 int	ft_strchr(const char *str)
 {
 	int	i;
@@ -59,7 +59,7 @@ int	ft_strchr(const char *str)
 /* ************************************************************************ */
 /*	malloc count * size and put 0											*/
 /* ************************************************************************ */
-
+//same libft
 void	*ft_calloc(size_t count, size_t size)
 {
 	char	*rtn;
@@ -77,7 +77,7 @@ void	*ft_calloc(size_t count, size_t size)
 /* ************************************************************************ */
 /*	join 2 str and malloc len 												*/
 /* ************************************************************************ */
-
+//not in libft
 char	*ft_strnjoin(char const *s1, char const *s2, size_t n)
 {
 	size_t	len_s1;

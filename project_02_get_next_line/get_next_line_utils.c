@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 14:39:57 by hgoorick          #+#    #+#             */
-/*   Updated: 2021/09/15 14:40:25 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:39:50 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /* ************************************************************************ */
 /*	return str's len 														*/
 /* ************************************************************************ */
-
+//same libft
 size_t	ft_strlen(const char *str)
 {
 	size_t	i;
@@ -29,7 +29,7 @@ size_t	ft_strlen(const char *str)
 /* ************************************************************************ */
 /*	copy size char from source in destination								*/
 /* ************************************************************************ */
-
+//same libft
 void	*ft_memcpy(void *destination, const void *source, size_t size)
 {
 	char	*str1;
@@ -49,7 +49,7 @@ void	*ft_memcpy(void *destination, const void *source, size_t size)
 /* ************************************************************************ */
 /*	return a string after '\n'												*/
 /* ************************************************************************ */
-
+//not in libft
 char	*ft_strtrim(char **line, int positionN)
 {
 	char	*string;
@@ -62,7 +62,7 @@ char	*ft_strtrim(char **line, int positionN)
 /* ************************************************************************ */
 /*	copy n char from s1														*/
 /* ************************************************************************ */
-
+//not in libft
 char	*ft_strndup(const char *s1, size_t n)
 {
 	char	*p;
