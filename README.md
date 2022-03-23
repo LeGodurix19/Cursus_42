@@ -19,5 +19,5 @@
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_04">CPP_04</a> | 88% | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_05">CPP_05</a> | 100% | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_06">CPP_06</a> | 100% | Decouverte du c++ |
-| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_07">CPP_07</a> | En cours | Decouverte du c++ |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_07">CPP_07</a> | 100% | Decouverte du c++ |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules/cpp_08">CPP_08</a> | En cours | Decouverte du c++ |
