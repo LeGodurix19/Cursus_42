@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 08:45:15 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/14 09:40:01 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/03/23 16:00:25 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@
 template< typename T >
 int easyfind( T const & contInt, int toFind)
 {
-    //typename T::const_iterator	valNow = cont.begin();
-
 	typename T::const_iterator	endCont = contInt.end();
     
     for (typename T::const_iterator	valNow = contInt.begin(); valNow != endCont; valNow++)
