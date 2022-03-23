@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:19:11 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/13 21:30:19 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/03/22 18:18:39 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ void	test_float(float const & nb)
 {
 	std::cout << "Float value => " << nb << std::endl;
 }
-
 
 int main()
 {

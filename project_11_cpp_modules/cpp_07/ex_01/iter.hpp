@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:19:09 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/13 21:27:03 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/03/22 18:06:48 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ template< typename T >
 void    iter( T * tab, int nb, void fct(T const & e))
 {
     for (int i = 0; i < nb; i++)
-    {
         fct(tab[i]);
-    }
 }
+
 #endif

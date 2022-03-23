@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 21:31:14 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/13 21:54:24 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/03/22 18:20:54 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ public:
 	void operator= ( Array const & ref )
 	{
 		this->_n = ref.size();
-		delete this->_array;
+		delete [] this->_array;
 		this->_array = new T[this->_n];
 		for (unsigned int i = 0; i < this->_n; i++)
 			_array[i] = ref.getArray()[i];
