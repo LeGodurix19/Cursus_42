@@ -12,4 +12,4 @@
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_08_philosophers">Philsophers</a> | 100% | Rencontre avec les threads et mutex pour creer un repas de philosophers. |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_09_minishell">Minishell</a> | 101% | Recreation de bash via un projet de groupe a 3. |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_10_net_practice">NetPractice</a> | 100% | Exploration du monde des reseaux a travers les IP. |
-| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules">Modules CCP</a> | 88% | Decouverte du c++ dans le detail. |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules">Modules C++</a> | 88% | Decouverte du c++ dans le detail. |
