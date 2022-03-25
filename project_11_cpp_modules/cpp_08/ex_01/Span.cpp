@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 08:45:28 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/14 19:10:42 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:41:14 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ Span & Span::operator=( Span const & op )
     /*                  */
     /********************/
 
-std::vector<int>  Span::getLst( void ) const
+std::list<int>  Span::getLst( void ) const
 {
     return ( this->_lst );
 }
@@ -84,27 +84,29 @@ int Span::getMax( void ) const
 
 long long Span::shortestSpan( void ) const
 {
+    std::list<int>    lst_copy;
+    std::list<int>::iterator next, iter, end;
+    long min, tmp;
+
+    
     if(this->_lst.size() <= 1)
 		throw Span::CantSpan();
 
-    long long p0;
-    long long p1;
-    long long dif;
+    lst_copy = this->_lst;
+    lst_copy.sort();
     
-    dif = (long)this->_lst[0] - (long)this->_lst[1];
-    for (int x = 0; x < this->_maxNb; x++)
-    {
-        p0 = (long)this->_lst[x];
-        for (int y = 0; y < this->_maxNb; y++)
-        {
-            p1 = (long)this->_lst[y];
-            if (x != y && dif > p0 - p1 && (p0 - p1) >= 0)
-                    dif = p0 - p1;
-            if (!dif)
-                return ((unsigned long)dif);
-        }
-    }
-    return ((unsigned long)dif);
+    next = lst_copy.begin();
+	iter = next++;
+	end = lst_copy.end();
+
+	min = std::abs(static_cast<long>(*(next++)) - static_cast<long>(*(iter++)));
+	while (next != end)
+	{
+		tmp = std::abs(static_cast<long>(*(next++)) - static_cast<long>(*(iter++)));
+		min = (tmp < min ? min : tmp);
+	}
+
+	return (min);
 }
 
 long long Span::longestSpan( void ) const
@@ -114,20 +116,10 @@ long long Span::longestSpan( void ) const
 
     long long p0;
     long long p1;
-    long long dif;
     
-    dif = this->_lst[0] - this->_lst[1];
-    for (int x = 0; x < this->_maxNb; x++)
-    {
-        p0 = this->_lst[x];
-        for (int y = 0; y < this->_maxNb; y++)
-        {
-            p1 = this->_lst[y];
-            if (x != y && dif < p0 - p1 && (p0 - p1) >= 0)
-                    dif = p0 - p1;
-        }
-    }
-    return (dif);
+    p0 = *std::min_element(this->_lst.begin(), this->_lst.end());
+    p1 = *std::max_element(this->_lst.begin(), this->_lst.end());
+    return (p1 - p0);
 }
 void    Span::addNumber( int const & i )
 {

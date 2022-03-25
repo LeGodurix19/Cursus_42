@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 08:45:31 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/03/23 16:06:01 by hgoorick         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:39:20 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Span
 private:
     
     int             _maxNb;
-    std::vector<int>	_lst;
+    std::list<int>	_lst;
 
 public:
 
@@ -34,7 +34,7 @@ public:
 
     ~Span( void );
 
-    std::vector<int>  getLst( void ) const ;
+    std::list<int>  getLst( void ) const ;
     int             getMax( void ) const ;
 
     long long shortestSpan( void ) const;

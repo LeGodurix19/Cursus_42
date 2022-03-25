@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+         #
+#    By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/14 08:45:26 by hugoorickx        #+#    #+#              #
-#    Updated: 2022/03/23 16:35:23 by hgoorick         ###   ########.fr        #
+#    Updated: 2022/03/25 13:34:09 by hugoorickx       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
