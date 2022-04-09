@@ -6,7 +6,7 @@
 #    By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 11:47:38 by hugoorickx        #+#    #+#              #
-#    Updated: 2022/04/09 23:46:57 by hugogoorick      ###   ########.fr        #
+#    Updated: 2022/04/10 00:29:40 by hugogoorick      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,9 +20,9 @@ all:  global_libft_init creat_dir print ${NAME}
 -include datas_makefile/manip_global_lib.mk
 
 #Mac_OS
-#@gcc ${CFLAGS} -I ${INCLUDES} -lmlx -framework OpenGL -framework AppKit -lz ${LIBFT} ${OBJS} -o $@
+#-lmlx -framework OpenGL -framework AppKit -lz
 #Mac Hugo
-#@gcc ${CFLAGS} -I ${INCLUDES} -I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit ${LIBFT} ${OBJS} -o $@
+#-I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit
 
 ${NAME}:	${OBJS} ${OBJS_MAIN}
 	@gcc ${CFLAGS} -I ${INCLUDES} -I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit ${LIBFT} ${OBJS} ${OBJS_MAIN} -o $@
