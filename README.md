@@ -13,3 +13,4 @@
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_09_minishell">Minishell</a> | 101% | Recreation de bash via un projet de groupe a 3. |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_10_net_practice">NetPractice</a> | 100% | Exploration du monde des reseaux a travers les IP. |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_11_cpp_modules">Modules C++</a> | 88% | Decouverte du c++ dans le detail. |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_12_cub3D">cub3d</a> | 88% | Creation d'un algorithme de raycasting a la maniere de wolfenstein 3D. |
