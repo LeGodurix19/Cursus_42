@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   malloc_fcts.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:45:12 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/08 14:46:40 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/04/09 23:24:18 by hugogoorick      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,19 @@ void	malloc_all_2(t_datas_global *all_datas)
 		all_datas->map_datas->east_wall, sizeof(t_datas_wall), all_datas);
 	all_datas->map_datas->west_wall = (t_datas_wall *)malloc_test(\
 		all_datas->map_datas->west_wall, sizeof(t_datas_wall), all_datas);
+	all_datas->test = (t_test *)malloc_test(\
+		all_datas->test, sizeof(t_test), all_datas);
+}
+
+void	malloc_all_3(t_datas_global *all_datas)
+{
+	all_datas->test->w = 0;
+	all_datas->test->s = 0;
+	all_datas->test->a = 0;
+	all_datas->test->d = 0;
+	all_datas->test->arrow_l = 0;
+	all_datas->test->arrow_r = 0;
+	all_datas->test->mouse_move = 0;
 }
 
 void	malloc_all(t_datas_global *all_datas)
@@ -75,8 +88,8 @@ void	malloc_all(t_datas_global *all_datas)
 	all_datas->tmp1 = NULL;
 	all_datas->map_datas->map = NULL;
 	all_datas->player_datas->dir_x = -2;
-	all_datas->player_datas->move_speed = 0.2;
-	all_datas->player_datas->rot_speed = 0.2;
+	all_datas->player_datas->move_speed = 0.1;
+	all_datas->player_datas->rot_speed = 0.05;
 	all_datas->mlx_ptr = mlx_init();
 	all_datas->win_ptr = mlx_new_window(all_datas->mlx_ptr, SCREEN_WIGHT, \
 		SCREEN_HEIGHT, "cub3D");

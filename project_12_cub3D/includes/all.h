@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   all.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:14:15 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/09 17:34:14 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/04/09 23:26:25 by hugogoorick      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ typedef struct s_datas_display	t_datas_display;
 typedef struct s_datas_global	t_datas_global;
 typedef struct s_ray			t_ray;
 typedef struct s_vert_line		t_vert_line;
+typedef struct s_test			t_test;
 
 struct s_datas_player
 {
@@ -37,6 +38,17 @@ struct s_datas_player
 	double	rot_speed;
 	double	plane_x;
 	double	plane_y;
+};
+
+struct s_test
+{
+	int	w;
+	int	s;
+	int	a;
+	int	d;
+	int	arrow_l;
+	int	arrow_r;
+	int	mouse_move;
 };
 
 struct s_datas_wall
@@ -75,6 +87,7 @@ struct s_datas_global
 	t_datas_map		*map_datas;
 	t_datas_player	*player_datas;
 	t_datas_display	*display_datas;
+	t_test			*test;
 	void			*mlx_ptr;
 	void			*win_ptr;
 	int				tmp2;
@@ -134,9 +147,8 @@ void	init_line_size(t_ray *data_r, t_datas_global *data);
 void	init_tex(t_ray *data_r, t_datas_global *data);
 void	player_3d_move(t_datas_global *data, int dir);
 void	def_dirs(t_datas_player *player, int val1, int val2, int val3);
-void	go(t_datas_player *val1, double val2, char **map, t_datas_global *data);
-void	back(t_datas_player *val1, double val2, char **map, \
-	t_datas_global *data);
+void	go(t_datas_player *val1, double val2, char **map);
+void	back(t_datas_player *val1, double val2, char **map);
 void	rotate(t_datas_player *val1, double val2, t_datas_global *data);
 void	lat_right(t_datas_player *v1, double v2, t_datas_global *data);
 void	lat_left(t_datas_player *v1, double v2, t_datas_global *data);
@@ -147,7 +159,12 @@ int		check_map(t_datas_global *all_datas);
 int		check_num(char *string, t_datas_global *all_datas);
 int		first_tests(char **argv, int nb_arg);
 int		give_me_wall(char *line, t_datas_global *all_datas);
-int		ft_key_hook(int keycode, t_datas_global *all_datas);
+
+int		ft_key_hook(t_datas_global *all_datas);
+int		ft_key_realese(int keycode, t_datas_global *all_datas);
+int		ft_key_press(int keycode, t_datas_global *all_datas);
+int		ft_mouse_move(int x, int y, t_datas_global *all_datas);
+int		ft_mouse_click(int key, int x, int y, t_datas_global *all_datas);
 
 double	wd(int val1, double val2, double val3, double val4);
 double	ray(t_datas_player *val1, int val2, double val3);
