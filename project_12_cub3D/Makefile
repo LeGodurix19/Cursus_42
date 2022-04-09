@@ -6,7 +6,7 @@
 #    By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/30 11:47:38 by hugoorickx        #+#    #+#              #
-#    Updated: 2022/04/08 11:58:25 by hugoorickx       ###   ########.fr        #
+#    Updated: 2022/04/09 17:21:07 by hugoorickx       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ all:  global_libft_init creat_dir print ${NAME}
 #@gcc ${CFLAGS} -I ${INCLUDES} -I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit ${LIBFT} ${OBJS} -o $@
 
 ${NAME}:	${OBJS}
-	@gcc ${CFLAGS} -I ${INCLUDES} -lmlx -framework OpenGL -framework AppKit -lz ${LIBFT} ${OBJS} -o $@
+	@gcc ${CFLAGS} -I ${INCLUDES} -I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit ${LIBFT} ${OBJS} -o $@
 	@printf "${START_FIRST}${BLUE}%-30s${DEFAULT}\t\t[${GREEN} OK ${DEFAULT}]%40s\n" "Compile" ""
 
 ${OBJ_DIR}/%.o:${SRC_DIR}/%.c
