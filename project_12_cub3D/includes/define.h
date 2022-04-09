@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 11:34:20 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/09 17:22:11 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/04/09 17:35:18 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,6 @@
 
 # define SCREEN_WIGHT 1000
 # define SCREEN_HEIGHT 500
-
-// # define SCREEN_WIGHT 640
-// # define SCREEN_HEIGHT 480
 
 # define PI 3.14159265359
 
