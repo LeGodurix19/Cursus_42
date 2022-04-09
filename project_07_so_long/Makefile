@@ -40,7 +40,8 @@ OBJ			=	${SRC:.c=.o}
 # ############## #
 
 CFLAGS		=	-Wall -Wextra -Werror
-MLX			=	-L ./mlx/ -lmlx -framework OpenGL -framework AppKit -lz
+#MLX			=	-L ./mlx/ -lmlx i-framework OpenGL -framework AppKit -lz
+MLX			=	-I /usr/X11/include -g -L /usr/X11/lib -l mlx -framework OpenGL -framework AppKit
 
 # ######## #
 # COMMANDS #
