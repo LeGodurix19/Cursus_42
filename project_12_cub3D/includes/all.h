@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   all.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/28 13:14:15 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/09 23:26:25 by hugogoorick      ###   ########.fr       */
+/*   Updated: 2022/04/11 00:48:29 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,12 +87,16 @@ struct s_datas_global
 	t_datas_map		*map_datas;
 	t_datas_player	*player_datas;
 	t_datas_display	*display_datas;
+	t_datas_wall	*sprite1;
+	t_datas_wall	*sprite2;
+	t_datas_wall	*sprite3;
 	t_test			*test;
 	void			*mlx_ptr;
 	void			*win_ptr;
 	int				tmp2;
 	char			*tmp;
 	char			**tmp1;
+	int				test1;
 };
 
 struct s_ray
@@ -152,6 +156,7 @@ void	back(t_datas_player *val1, double val2, char **map);
 void	rotate(t_datas_player *val1, double val2, t_datas_global *data);
 void	lat_right(t_datas_player *v1, double v2, t_datas_global *data);
 void	lat_left(t_datas_player *v1, double v2, t_datas_global *data);
+void	draw_bonus(t_datas_global *data, t_vert_line *data_v);
 
 char	*get_next_line(int fd);
 

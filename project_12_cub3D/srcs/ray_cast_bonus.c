@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ray_cast.c                                         :+:      :+:    :+:   */
+/*   ray_cast_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/31 10:53:47 by lbuccher          #+#    #+#             */
-/*   Updated: 2022/04/11 00:27:38 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/04/11 00:36:59 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,24 @@ void	draw_vertical_line(t_datas_global *data, t_ray *data_r)
 	data_v.i = -1;
 	while (++data_v.i < SCREEN_HEIGHT)
 	{
-		if (data_v.i < data_r->draw_start)
-			data_v.colors = (unsigned int)data->map_datas->sky;
+		data_v.ptr = data->display_datas->addr + (data_v.i * \
+			data->display_datas->size_line + data_v.x * \
+			(data->display_datas->bpp / 8));
+		*data_v.ptr = (unsigned int)data->map_datas->floor;
+		if (data_v.i >= SCREEN_HEIGHT - data->sprite1->size_y
+			&& data_v.x >= (SCREEN_WIGHT / 2) - (data->sprite1->size_x / 2)
+			&& data_v.x < (SCREEN_WIGHT / 2) + (data->sprite1->size_x / 2))
+			draw_bonus(data, &data_v);
+		else if (data_v.i < data_r->draw_start)
+			*data_v.ptr = (unsigned int)data->map_datas->sky;
 		else if (data_v.i < data_r->draw_end)
 		{
 			data_r->tex_y = (int)data_r->tex_pos;
 			data_r->tex_pos += data_r->step;
-			data_v.colors = *(unsigned int *)(data_r->wall->addr + \
+			*data_v.ptr = *(unsigned int *)(data_r->wall->addr + \
 				(data_r->tex_y * data_r->wall->size_line + data_r->tex_x * \
 				(data_r->wall->bpp / 8)));
 		}
-		else
-			data_v.colors = (unsigned int)data->map_datas->floor;
-		data_v.ptr = data->display_datas->addr + (data_v.i * \
-			data->display_datas->size_line + data_v.x * \
-			(data->display_datas->bpp / 8));
-		*data_v.ptr = data_v.colors;
 	}
 }
 

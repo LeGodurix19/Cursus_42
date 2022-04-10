@@ -1,16 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ray_cast_utils.c                                   :+:      :+:    :+:   */
+/*   ray_cast_utils_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 13:38:46 by lbuccher          #+#    #+#             */
-/*   Updated: 2022/04/10 14:17:03 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/04/11 00:37:44 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "all.h"
+
+void	draw_bonus(t_datas_global *data, t_vert_line *data_v)
+{
+	if (data->test1 % 100 >= 0 && data->test1 % 100 <= 25)
+		*data_v->ptr = *(unsigned int *)(data->sprite1->addr + \
+		(((data_v->i - SCREEN_HEIGHT + data->sprite1->size_y) * \
+		data->sprite1->size_line) + (SCREEN_WIGHT - data_v->x - \
+		(SCREEN_WIGHT / 2) - (data->sprite1->size_x / 2)) * \
+		(data->sprite1->bpp / 8)));
+	else if (data->test1 % 100 > 25 && data->test1 % 100 <= 50)
+		*data_v->ptr = *(unsigned int *)(data->sprite2->addr + \
+		(((data_v->i - SCREEN_HEIGHT + data->sprite2->size_y) * \
+		data->sprite2->size_line) + (SCREEN_WIGHT - data_v->x - \
+		(SCREEN_WIGHT / 2) - (data->sprite2->size_x / 2)) * \
+	 	(data->sprite2->bpp / 8)));
+	else if (data->test1 % 100 > 50 && data->test1 % 100 <= 75)
+		*data_v->ptr = *(unsigned int *)(data->sprite1->addr + \
+			(((data_v->i - SCREEN_HEIGHT + data->sprite1->size_y) \
+			* data->sprite1->size_line) + (SCREEN_WIGHT - \
+			data_v->x - (SCREEN_WIGHT / 2) - (data->sprite1->size_x \
+			/ 2)) * (data->sprite1->bpp / 8)));
+	else if (data->test1 % 100 > 75 && data->test1 % 100 <= 99)
+		*data_v->ptr = *(unsigned int *)(data->sprite3->addr + \
+			(((data_v->i - SCREEN_HEIGHT + data->sprite3->size_y) \
+			* data->sprite3->size_line) + (SCREEN_WIGHT - \
+			data_v->x - (SCREEN_WIGHT / 2) - (data->sprite3->size_x \
+			/ 2)) * (data->sprite3->bpp / 8)));
+}
 
 void	init_ray_var(t_ray *data_r, t_datas_global *data)
 {

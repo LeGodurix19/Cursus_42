@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_hook_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:43:08 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/10 00:04:41 by hugogoorick      ###   ########.fr       */
+/*   Updated: 2022/04/11 00:30:11 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_mouse_click(int key, int x, int y, t_datas_global *all_datas)
 {
 	if (key == 1)
 		all_datas->test->mouse_move = 1;
-	else if (key == 2)
+	else
 		all_datas->test->mouse_move = 0;
 	x = 0;
 	y = 0;

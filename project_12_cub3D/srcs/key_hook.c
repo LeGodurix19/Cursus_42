@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   key_hook.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugogoorickx <hugogoorickx@student.42.f    +#+  +:+       +#+        */
+/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/08 14:43:08 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/04/09 23:39:44 by hugogoorick      ###   ########.fr       */
+/*   Updated: 2022/04/11 00:14:28 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ int	ft_key_realese(int keycode, t_datas_global *all_datas)
 
 int	ft_key_hook(t_datas_global *all_datas)
 {
+	all_datas->test1++;
 	if (all_datas->test->w == 1)
 		player_3d_move(all_datas, 0);
 	if (all_datas->test->s == 1)
