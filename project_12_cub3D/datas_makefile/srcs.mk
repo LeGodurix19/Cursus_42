@@ -46,6 +46,7 @@ BONUS += key_hook_bonus.c
 BONUS += main_bonus.c
 BONUS += ray_cast_bonus.c
 BONUS += ray_cast_utils_bonus.c
+BONUS += mini_map_bonus.c
 
 SRC += ft_print_error.c
 SRC += free_all.c
@@ -59,3 +60,4 @@ SRC += move.c
 SRC += key_hook.c
 SRC += malloc_fcts.c
 SRC += def_vars.c
+SRC += mini_map_utils_bonus.c
