@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:11 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 15:22:14 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/05/20 14:09:59 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,12 @@ namespace ft
 	}
 
 	template<class InputIt1, class InputIt2>
+	bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2)
+	{
+		return (_equal(first1, last1, first2, last2, typename ft::iterator_traits<InputIt1>::iterator_category(), typename ft::iterator_traits<InputIt2>::iterator_category()));
+	}
+
+	template<class InputIt1, class InputIt2>
 	bool _equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2, ft::input_iterator_tag, ft::input_iterator_tag)
 	{
 		while (first1 != last1)
@@ -74,12 +80,6 @@ namespace ft
 	}
 
 	template<class InputIt1, class InputIt2>
-	bool equal(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2)
-	{
-		return (_equal(first1, last1, first2, last2, typename ft::iterator_traits<InputIt1>::iterator_category(), typename ft::iterator_traits<InputIt2>::iterator_category()));
-	}
-
-	template<class InputIt1, class InputIt2>
 	bool lexicographical_compare(InputIt1 first1, InputIt1 last1, InputIt2 first2, InputIt2 last2)
 	{
 		while (first1 != last1)
@@ -92,6 +92,17 @@ namespace ft
 			++first2;
 		}
 		return (first2 != last2);
+	}
+
+	template <class InputIterator1, class InputIterator2, class Compare>
+	bool lexicographical_compare (InputIterator1 first1, InputIterator1 last1, InputIterator2 first2, InputIterator2 last2, Compare comp)
+	{
+		while (comp(*first1, *first2))
+		{
+			++first1;
+			++first2;
+		}
+		return (comp(*first1, *first2));
 	}
 
 	template<class InputIt, class OutputIt>
