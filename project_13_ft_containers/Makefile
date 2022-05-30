@@ -4,7 +4,7 @@ GREEN			=	\033[0;92m
 YELLOW			=	\033[0;93m
 START_FIRST		=	\033[999D
 
-FLAGS = -std=c++98
+FLAGS = -std=c++98 -Wall -Werror -Wextra
 
 SRCS1 = main1.cpp
 
@@ -14,6 +14,9 @@ INC = include/
 
 all:
 	make test
+
+%.o:%.cpp
+	@c++ ${FLAGS} -c $< -o $@
 
 ft:
 	@printf "${START_FIRST}$(GREEN)%-100s$(DEFAULT)\n" "Try with my containers:"
@@ -29,12 +32,12 @@ verif:
 
 test1:
 	@printf "${START_FIRST}$(YELLOW)\t%-100s$(DEFAULT)" "COMPILATION ..."
-	@clang++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS1) -o $(NAMESPACE)
+	@c++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS1) -o $(NAMESPACE)
 	@printf "${START_FIRST}$(GREEN)\t%-100s$(DEFAULT)\n" "COMPILATION OK"
 
 test2:
 	@printf "${START_FIRST}$(YELLOW)\t%-100s$(DEFAULT)" "COMPILATION ..."
-	@clang++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS2) -o $(NAMESPACE)
+	@c++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS2) -o $(NAMESPACE)
 	@printf "${START_FIRST}$(GREEN)\t%-100s$(DEFAULT)\n" "COMPILATION OK"
 
 runft: ft

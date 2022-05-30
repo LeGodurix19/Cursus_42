@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:56 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 23:23:10 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/05/30 13:37:48 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -334,14 +334,16 @@ namespace ft
 
 			static void _swap_neighbors(node_type* n1, node_type* n2)
 			{
-				node_type* n1_parent = n1->parent;
-				bool n1_parent_is_left = n1_parent ? n1_parent->left == n1 : false;
 				node_type* n2_parent = n2->parent;
-				bool n2_parent_is_left = n2->parent ? n2_parent->left == n2 : false;
-				node_type* n1_left = n1->left;
-				node_type* n1_right = n1->right;
 				node_type* n2_left = n2->left;
 				node_type* n2_right = n2->right;
+				bool n2_parent_is_left = ((n2->parent) ? n2_parent->left == n2 : false);
+
+				node_type* n1_parent = n1->parent;
+				node_type* n1_left = n1->left;
+				node_type* n1_right = n1->right;
+				bool n1_parent_is_left = ((n1_parent) ? n1_parent->left == n1 : false);
+
 				if (n1_parent)
 				{
 					if (n1_parent_is_left)
@@ -383,6 +385,7 @@ namespace ft
 			static node_type* rotateLeft(node_type* root)
 			{
 				node_type* newRoot = root->right;
+
 				root->right = newRoot->left;
 				if (newRoot->left)
 					newRoot->left->parent = root;

@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:51 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 21:16:48 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/05/30 13:41:04 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,11 @@ namespace ft
 	/*						*/
 	/************************/
 
-			typedef Container						container_type;
-			typedef typename Container::value_type	value_type;
-			typedef typename Container::size_type	size_type;
-			typedef typename Container::reference	reference;
-			typedef typename Container::const_reference	const_reference;
+			typedef Container								container_type;
+			typedef typename Container::value_type			value_type;
+			typedef typename Container::size_type			size_type;
+			typedef typename Container::reference			reference;
+			typedef typename Container::const_reference		const_reference;
 
 	/************************/
 	/*						*/

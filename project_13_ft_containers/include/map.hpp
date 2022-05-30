@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:20 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 23:06:05 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/05/30 12:45:21 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -397,17 +397,19 @@ namespace ft
 			{
 				if (!node)
 				{
-					_size += 1;
 					node_type* new_node = _allocator.allocate(1, node);
+					
+					_size += 1;
 					new (new_node) node_type(value_type(k, v), nullptr);
 					this->_root = new_node;
 					return new_node;
 				}
 				if (Compare()(k, node->data.first))
 				{
+					node_type* new_node = _allocator.allocate(1, node);
+
 					if (node_type::has_left_child(node))
 						return _insert(node->left, k, v);
-					node_type* new_node = _allocator.allocate(1, node);
 					new (new_node) node_type(value_type(k, v), node);
 					node->left = new_node;
 					MY_ASSERT(node->left->parent == node);
@@ -438,8 +440,10 @@ namespace ft
 			size_type _erase(const K& key)
 			{
 				node_type* node_to_delete = nullptr;
+
 				begin_erase(this->_root, key, &node_to_delete);
-				if (node_to_delete) { // if the key appears and a node has to be deleted
+				if (node_to_delete)
+				{ // if the key appears and a node has to be deleted
 					_size -= 1;
 					end_erase(node_to_delete);
 					this->update_first_and_last();
@@ -509,9 +513,7 @@ namespace ft
 					return;
 				if (node->balance_factor > 1 || node->balance_factor < -1)
 				{
-					// one has to analyze the child on the other side of the recursion
-					// to know if the height of the node changes after rebalancing
-					node_type* other_child = node->balance_factor == -2 ? node->left : node->right;
+					node_type* other_child = ((node->balance_factor == -2) ? node->left : node->right);
 					bool stop_recursion = other_child->balance_factor == 0;
 					node = this->rebalance(node);
 					if (!node->parent)
@@ -544,8 +546,7 @@ namespace ft
 					return _find(node->left, key);
 				else if (Compare()(node->data.first, key))
 					return _find(node->right, key);
-				else
-					return node;
+				return node;
 			}
 			// find a key-value pair
 			node_type* _find(const K& key) const												{ return _find(this->_root, key); }

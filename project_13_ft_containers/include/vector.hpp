@@ -6,7 +6,7 @@
 /*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:15:48 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 23:06:28 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/05/30 13:22:53 by hugoorickx       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -249,34 +249,17 @@ namespace ft
 				--_end;
 			}
 
-			iterator insert(iterator pos, const T& value)
-			{
-				if (pos <= &value && &value <= _end)
-				{
-					T v = value;
-					return _insert(pos, 1, v);
-				}
-				return _insert(pos, 1, value);
-			}
-
-			void insert(iterator pos, size_type count, const T& value)
-			{
-				if (pos <= &value && &value <= _end)
-				{
-					T v = value;
-					_insert(pos, count, v);
-				}
-				_insert(pos, count, value);
-			}
+			iterator insert(iterator pos, const T& value)						{ return _insert(pos, 1, value); }
+			void insert(iterator pos, size_type count, const T& value)			{ _insert(pos, count, value); }
 
 			template<class InputIt>
 			void insert(iterator pos, typename ft::enable_if<!ft::is_integral<InputIt>::value, InputIt>::type first, InputIt last)
 			{
 				difference_type index = pos - begin();
 				size_t count = ft::distance(first, last);
+				iterator it;
 				if (size() + count > capacity())
 					reserve(ft::max(2 * size(), size() + count));
-				iterator it;
 				for (it = _start + size() + count - 1; it >= _start + index + count; it--)
 				{
 					if (it >= _start + size())
@@ -297,6 +280,7 @@ namespace ft
 
 			iterator erase(iterator position)			{ return erase(position, position + 1); }
 
+			// Copy the contents after last after first and destroy the nb element at the end
 			iterator erase(iterator first, iterator last)
 			{
 				difference_type number_of_deleted = last - first;
