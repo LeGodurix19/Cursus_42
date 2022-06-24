@@ -1,0 +1,14 @@
+rm -f ./project_01_libft/.DS_Store
+rm -f ./project_02_get_next_line/.DS_Store
+rm -f ./project_03_ft_printf/.DS_Store
+rm -f ./project_04_born2beroot/.DS_Store
+rm -f ./project_05_minitalk/.DS_Store
+rm -f ./project_06_push_swap/.DS_Store
+rm -f ./project_07_so_long/.DS_Store
+rm -f ./project_08_philosophers/.DS_Store
+rm -f ./project_09_minishell/.DS_Store
+rm -f ./project_10_net_practice/.DS_Store
+rm -f ./project_11_cpp_modules/.DS_Store
+rm -f ./project_12_cub3D/.DS_Store
+rm -f ./project_13_ft_containers/.DS_Store
+rm -f ./project_14_inception/.DS_Store
