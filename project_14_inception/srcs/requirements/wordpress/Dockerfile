@@ -42,7 +42,7 @@ WORKDIR /var/www/wordpress
 # Copy files										#
 #####################################################
 
-COPY	config/wp-config /config/wp-config
+COPY	config/wp-config.php /config/wp-config
 COPY	./tools/entrypoint.sh /tmp/entrypoint.sh
 
 #####################################################
