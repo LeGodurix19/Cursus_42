@@ -1,3 +1,4 @@
+rm -f ./.DS_Store
 rm -f ./project_01_libft/.DS_Store
 rm -f ./project_02_get_next_line/.DS_Store
 rm -f ./project_03_ft_printf/.DS_Store
