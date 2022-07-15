@@ -20,6 +20,7 @@ fi
 #define the dir and exec mysqld_safe
 usr/bin/mysqld_safe --datadir=/var/lib/mysql
 
+#Correction
 # mysql -u root -p
 # SHOW DATABASES;
 # use 'wordpress';

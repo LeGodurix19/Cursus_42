@@ -85,7 +85,7 @@ re		:	fclean all
 
 .PHONY : all build up down pause unpause clean fclean re show_me
 
-# Demande dans la fiche de correction
+# Correction
 # correc	:
 # 			@ sudo docker stop $(docker ps -qa)
 # 			@ sudo docker rm $(docker ps -qa) 
