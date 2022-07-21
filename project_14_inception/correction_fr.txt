@@ -7,11 +7,13 @@ Instructions générales
 - Assurez-vous qu'un Makefile est situé à la racine du référentiel. 
 
 - Avant de commencer l'évaluation, exécutez cette commande dans le terminal : 
-  " docker stop $(docker ps -qa); 
-    docker rm $(docker ps -qa);
-    docker rmi -f $(docker images -qa);
-    docker volume rm $ (volume docker ls -q);
-    docker network rm $(docker network ls -q) 2>/dev/null"
+  " sudo docker stop $(sudo docker ps -qa); 
+    sudo docker rm $(sudo docker ps -qa);
+    sudo docker rmi -f $(sudo docker images -qa);
+    sudo docker volume rm $(sudo docker volume ls -q);
+    sudo docker network rm $(sudo docker network ls -q) 2>/dev/null"
+
+(Exécutez ensuite la commande 'sudo docker network ls' pour montrer que 3 reseau par defaut tourne encore sur la machine.)
 
 - Lire le fichier docker-compose.yml.
   Il ne doit pas y avoir 'network: host' ou 'links:'.
@@ -49,12 +51,20 @@ Aperçu du projet
 - La personne évaluée doit vous expliquer en termes simples :
 
 - Comment fonctionnent Docker et docker-compose 
+        Docker est un outil qui vous permet de créer, déployer et lancer vos applications en utilisant des conteneurs.
+        Pour mettre en place ces conteneurs, on crée des images Docker.
+        L’image Docker permet de configurer tout l’environnement dans lequel le conteneur va s'exécuter.
+        Pour créer ces images, Docker utilise un fichier spécial appelé Dockerfile, qui grâce à une syntaxe simple et élégante va nous permettre de préparer nos images.
+        L’image est ensuite construite par le démon Docker via l’utilisation de commandes dans le terminal qui sont regroupées dans ce qu’on appelle un CLI.
+        Pour gérer l’ensemble des conteneurs d’une application, on utilise Docker Compose.
 
 - La différence entre une image Docker utilisée avec docker-compose et sans docker-compose 
 
 - Le bénéfice de Docker par rapport aux VM 
+        Plus leger en ressources.
 
 - La pertinence de la structure de répertoires requise pour ce projet (un exemple est fourni dans le fichier PDF du sujet).
+        L'arborescence est logique, un peu comme une arborescence reelle.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -115,6 +125,8 @@ NGINX avec SSL/TLS
   Un avertissement de certificat auto-signé peut apparaître.
   Si l'un des points ci-dessus n'est pas clairement expliqué et correct, le processus d'évaluation se termine maintenant.
 
+(TLS est un protocole de securite dans l'envoi de message)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 WordPress avec php-fpm et son volume
@@ -132,6 +144,7 @@ WordPress avec php-fpm et son volume
 
 - Connectez-vous avec le compte administrateur pour accéder au tableau de bord d'administration.
   Le nom d'utilisateur de l'administrateur ne doit pas inclure « admin » ou « Admin » (par exemple, admin, administrator, Admin-login, admin-123, etc.).
+  (/wp-admin)
 
 - Depuis le tableau de bord Administration, modifiez une page.
   Vérifiez sur le site Web que la page a été mise à jour.
@@ -157,6 +170,7 @@ MariaDB et son volume
 - Essayez de vous connecter à la base de données SQL avec le compte utilisateur et son mot de passe.
   Vérifiez que la base de données n'est pas vide.
   Si l'un des points ci-dessus n'est pas correct, le processus d'évaluation se termine maintenant.
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 

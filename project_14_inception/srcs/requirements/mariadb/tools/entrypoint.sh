@@ -21,6 +21,8 @@ fi
 usr/bin/mysqld_safe --datadir=/var/lib/mysql
 
 #Correction
+# docker container ls
+# docker exec –it <container name> /bin/sh
 # mysql -u root -p
 # SHOW DATABASES;
 # use 'wordpress';
