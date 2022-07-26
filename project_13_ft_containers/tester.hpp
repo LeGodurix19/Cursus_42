@@ -1,17 +1,5 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   tester.hpp                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ijacquet <ijacquet@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 15:04:48 by ijacquet          #+#    #+#             */
-/*   Updated: 2021/11/12 15:04:48 by ijacquet         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#ifndef __TESTER_HPP_
-# define __TESTER_HPP_
+#ifndef TESTER_HPP_
+# define TESTER_HPP_
 
 # include <deque>
 # include <stack>
@@ -24,13 +12,7 @@
 # include <map>
 # include <utility>
 
-# include "map.hpp"
-# include "stack.hpp"
-# include "vector.hpp"
-# include "type_traits.hpp"
-# include "iterator.hpp"
-# include "utility.hpp"
-# include "tree.hpp"
+#include "my_includes.hpp"
 
 # define RESET "\e[0m"
 # define RED "\e[91m"

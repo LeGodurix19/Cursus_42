@@ -22,48 +22,41 @@ ft:
 	@printf "${START_FIRST}$(GREEN)%-100s$(DEFAULT)\n" "Try with my containers:"
 	@make NAMESPACE=ft test1
 
+
 std:
 	@printf "${START_FIRST}$(GREEN)%-100s$(DEFAULT)\n" "Try with default containers:"
 	@make NAMESPACE=std test1
 
 verif:
 	@printf "${START_FIRST}$(GREEN)%-100s$(DEFAULT)\n" "Try with my containers:"
-	@make NAMESPACE=verif test2
+	@printf "${START_FIRST}$(YELLOW)\t%-100s$(DEFAULT)" "COMPILATION ..."
+	@c++ -I $(INC) -D NAMESPACE=verif $(CFLAGS) $(SRCS2) -o verif
+	@printf "${START_FIRST}$(GREEN)\t%-100s$(DEFAULT)\n" "COMPILATION OK"
 
 test1:
 	@printf "${START_FIRST}$(YELLOW)\t%-100s$(DEFAULT)" "COMPILATION ..."
 	@c++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS1) -o $(NAMESPACE)
 	@printf "${START_FIRST}$(GREEN)\t%-100s$(DEFAULT)\n" "COMPILATION OK"
 
-test2:
-	@printf "${START_FIRST}$(YELLOW)\t%-100s$(DEFAULT)" "COMPILATION ..."
-	@c++ -I $(INC) -D NAMESPACE=$(NAMESPACE) $(CFLAGS) $(SRCS2) -o $(NAMESPACE)
-	@printf "${START_FIRST}$(GREEN)\t%-100s$(DEFAULT)\n" "COMPILATION OK"
-
-runft: ft
-	@./ft
-
-runstd: std
-	@./std
-
-runverif: verif
+test: ft std verif
 	@./verif all
-
-test: ft std runverif
 	@echo "\n+-------------------------------------------+"
 	@echo "|###########################################|"
 	@echo "+-------------------------------------------+\n"
-
 	@./ft > ft_output
 	@./std > std_output
 	@diff -y --suppress-common-lines ft_output std_output || true
 
 clean:
-	@rm -rf ft std ft_output std_output verif
+	@rm -rf ft_output std_output 
 	@rm -rf ft.dSYM std.dSYM
 	@echo "$(RED)CLEAN OK${DEFAULT}"
 
-re: clean ft
+fclean: clean
+	@rm -rf ft std verif
+	@echo "$(RED)ALL CLEAN OK${DEFAULT}"
+
+re: fclean  test
 
 retest: clean test1 verif
 

@@ -8,15 +8,7 @@
 #include <ctime>
 #include <stack>
 
-# include "algorithm.hpp"
-# include "iterator.hpp"
-# include "map.hpp"
-# include "stack.hpp"
-# include "tree.hpp"
-# include "type_traits.hpp"
-# include "utility.hpp"
-# include "vector.hpp"
-
+#include "my_includes.hpp"
 
 #ifndef NAMESPACE
 # define NAMESPACE ft
@@ -29,8 +21,6 @@ static std::ostream& operator<<(std::ostream& o, const NAMESPACE::pair<Key, T>& 
 {
 	return o << "(" << p.first << ", " << p.second << ")";
 }
-
-
 
 std::string get_namespace()
 {
@@ -47,10 +37,10 @@ std::string get_namespace()
 
 #undef ft
 #undef std
-
 }
 
-void display_namespace() {
+void display_namespace()
+{
 	cout << "### used namespace: " + get_namespace() + " ###\n";
 }
 

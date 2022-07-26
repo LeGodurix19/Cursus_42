@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   iterator.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:16 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/19 15:22:12 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/07/25 12:04:56 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ITERATORTRAITS_HPP
-# define ITERATORTRAITS_HPP
+#ifndef ITERATOR_HPP
+# define ITERATOR_HPP
 
 namespace ft
 {

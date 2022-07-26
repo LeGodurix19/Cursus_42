@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ijacquet <ijacquet@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 15:03:56 by ijacquet          #+#    #+#             */
-/*   Updated: 2021/11/12 15:03:56 by ijacquet         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "tester.hpp"
 
 void 	print_header(std::string str)
@@ -44,44 +32,19 @@ void print_error()
 }
 
 
-bool compare_supEq(int a, int b)
-{
-	return (a >= b);
-}
+bool compare_supEq(int a, int b)			{ return (a >= b); }
 
-bool compare_infEq(int a, int b)
-{
-	return (a <= b);
-}
+bool compare_infEq(int a, int b)			{ return (a <= b); }
 
-bool compare_Eq(int a, int b)
-{
-	return (a == b);
-}
+bool compare_Eq(int a, int b)				{ return (a == b); }
 
-bool compare_inf(int a, int b)
-{
-	return (a < b);
-}
+bool compare_inf(int a, int b)				{ return (a < b); }
 
-bool compare_sup(int a, int b)
-{
-	return (a > b);
-}
+bool compare_sup(int a, int b)				{ return (a > b); }
 
-bool test_pair(int &val)
-{
-	if (val % 2)
-		return (false);
-	return (true);
-}
+bool test_pair(int &val)					{ return (!(val % 2)); }
 
-bool pred(int &val)
-{
-	if (val > 4)
-		return (false);
-	return (true);
-}
+bool pred(int &val)							{ return (!(val > 4)); }
 
 int main(int argc, char **argv)
 {

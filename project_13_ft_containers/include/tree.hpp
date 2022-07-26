@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tree.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hugoorickx <hugoorickx@student.42.fr>      +#+  +:+       +#+        */
+/*   By: hgoorick <hgoorick@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 15:13:56 by hugoorickx        #+#    #+#             */
-/*   Updated: 2022/05/30 13:37:48 by hugoorickx       ###   ########.fr       */
+/*   Updated: 2022/07/25 12:08:10 by hgoorick         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,24 +149,18 @@ namespace ft
 			node_type*							_node;
 
 		public:
-			operator NodeConstIterator<T>()
-			{
-				return NodeConstIterator<T>(_tree, _node);
-			}
+			operator NodeConstIterator<T>()							{ return NodeConstIterator<T>(_tree, _node); }
 
-			NodeIterator() : _tree(nullptr), _node(nullptr)
-			{ return; }
+			NodeIterator() : _tree(nullptr), _node(nullptr)			{ return; }
 
 			NodeIterator(tree_type* t, node_type* n)
 				: _tree(t)
-				, _node(n)
-			{ return; }
+				, _node(n)											{ return; }
 
 			template<class T2>
 			NodeIterator(const NodeIterator<T2>& other)
 				: _tree(other._tree)
-				, _node(other._node)
-			{ return; }
+				, _node(other._node)								{ return; }
 
 			template<class T2>
 			NodeIterator& operator=(const NodeIterator<T2>& other)
@@ -179,9 +173,9 @@ namespace ft
 				return *this;
 			}
 
-			reference operator*() const		{ return _node->data; }
+			reference operator*() const								{ return _node->data; }
 
-			pointer operator->() const		{ return &(operator*()); }
+			pointer operator->() const								{ return &(operator*()); }
 
 			NodeIterator& operator++()
 			{
