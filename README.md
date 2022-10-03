@@ -2,7 +2,7 @@
 
 | Project                                                                                                   | Points    | Objectifs                                                                                             |
 | --------------------------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_01_libft">Libft</a>                   | 125%      | Creation d'une librairie personnelle en C pour les futurs projets.                                    |
+| <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_01_libft">Libft</a>                   | https://github.com/LeGodurix19/Cursus_42/commit/7cfa0bc9e99ce340aa0a3eddde1f2d71d81a37f2      | Creation d'une librairie personnelle en C pour les futurs projets.                                    |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_02_get_next_line">Get_next_line</a>   | 125%      | Fonction permettant de lire une ligne de texte depuis un file descriptor.                             |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_03_ft_printf">Ft_printf</a>           | 100%      | Recreation d'une fonction printf plus basique.                                                        |
 | <a href="https://github.com/LeGodurix19/Cursus_42/tree/main/project_04_born2beroot">Born2beroot</a>       | 110%      | Decouverte sommaire dans le monde des serveurs et des scripts bash.                                   |
